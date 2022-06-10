@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-size: 1.2rem;
+}
+
 header{
     height: 80px;
 }
@@ -16,4 +20,8 @@ header{
     width: 100px;
     position: relative;
     left: 0;
+}
+
+.comentario{
+    color: red;
 }
