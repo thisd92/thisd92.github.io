@@ -11,8 +11,3 @@
     position: absolute;
     left: 0;
 }
-
-.navbar ul{
-    display: flex;
-    justify-content: flex-end;
-}
