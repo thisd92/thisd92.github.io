@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    width: 200px;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: flex-end;
+}
