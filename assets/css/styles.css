@@ -7,8 +7,8 @@
 }
 
 #logoFadergs{
-    width: 200px;
+    height: 50px;
+    width: auto;
     position: absolute;
     left: 0;
-    height: 100px;
 }
