@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Vanilla JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <figure>
+                    <a href="index.html"><img src="http://dev-th.com.br/src/assets/imgs/LogoDevTH.png" alt=""
+                            srcset=""></a>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <a href="create.html">
+                    <li class="list">Create</li>
+                </a>
+                <a href="read.html">
+                    <li class="list">Read</li>
+                </a>
+                <a href="update.html">
+                    <li class="list">Update</li>
+                </a>
+                <a href="delete.html">
+                    <li class="list">Delete</li>
+                </a>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section>
+            <div class="forms">
+                <form action="">
+                    <div class="form-control">
+                        <label for="fname">Name</label>
+                        <input type="text" name="fname" id="fname" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="femail">E-mail</label>
+                        <input type="email" name="femail" id="femail" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="ftel">Telefone</label>
+                        <input type="tel" name="ftel" id="ftel" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="fcep">CEP</label>
+                        <input type="text" name="fcep" id="fcep" onfocusout="getCep()" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="fend">Endereço</label>
+                        <input type="text" name="fend" id="fend" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="fnum">Número</label>
+                        <input type="number" name="fnum" id="fnum" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="fcidade">Cidade</label>
+                        <input type="text" name="fcidade" id="fcidade" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="fUf">UF</label>
+                        <input type="text" name="fUf" id="fUf" required>
+                    </div>
+                    <div class="form-control">
+                        <input class="btn-form" type="button" value="Enviar" onclick=getDados()>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <figure>
+                <img src="http://dev-th.com.br/src/assets/imgs/LogoDevTH.png" alt="">
+            </figure>
+        </div>
+    </footer>
+
+    <script src="../js/vanilla.js"></script>
+    <script type="text/javascript" src="../js/form.js"></script>
+    <script src="../js/ajaxCEP.js"></script>
+
+</body>
+
+</html>

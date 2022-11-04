@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald, 'Poor Story';
+    font-size: 16px;
+}
+
+h1{
+    font-size: 24px !important;
+}
+
+.container-header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #9c9c9c;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+.logo img{
+    height: 86px;
+}
+
+.navbar{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-list li{
+    list-style: none;
+    margin-right: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.nav-list li:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: #353535;
+}
+
+.active{
+    background-color: #000;
+    color: #fff;
+}
+
+footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #000;
+}
+
+footer{
+    width: 100%;
+}
+
+.footer-logo img{
+    height: 86px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.forms{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border: solid #dbdbdb 1px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px #dbdbdb;
+    margin: 10px auto;
+}
+
+form{
+    width: 80%;
+    padding: 5px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.btn-form{
+    background-color: #353535;
+    color: #fff;
+    border-radius: 5px;
+}

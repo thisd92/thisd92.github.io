@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poor Story', Oswald;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 24px !important;
+}
+
+
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 90px 1fr 100px;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+        'header header'
+        'nav cont'
+        'footer footer';
+}
+
+header{
+    grid-area: header;
+    background-color: black;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    height: 86px;
+}
+
+aside{
+    grid-area: nav;
+    background-color: #e0dfdf;
+}
+
+main{
+    grid-area: cont;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+.navbar{
+    display: flex;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-list li{
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.nav-list li:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: #000;
+}
+
+.active{
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border: solid #dbdbdb 1px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px #dbdbdb;
+    margin: 10px auto;
+}
+
+form{
+    width: 80%;
+    padding: 5px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.btn-form{
+    background-color: #353535;
+    color: #fff;
+    border-radius: 5px;
+}
