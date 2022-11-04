@@ -18,7 +18,7 @@ h1{
 body{
     display: grid;
     min-height: 100vh;
-    grid-template-rows: 90px 1fr 100px;
+    grid-template-rows: 90px 1fr 90px;
     grid-template-columns: 200px 1fr;
     grid-template-areas: 
         'header header'
@@ -52,6 +52,25 @@ main{
 footer{
     grid-area: footer;
     background-color: black;
+}
+
+.footer{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.footer-logo img{
+    height: 86px;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar{
