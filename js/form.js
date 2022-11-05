@@ -9,7 +9,7 @@ let numero = document.getElementById('fnum')
 let cidade = document.getElementById('fcidade')
 let uf = document.getElementById('fUf')
 
-const getDados = () => {
+const save = () => {
 
     usuario = {
         nome: nome.value,
@@ -21,9 +21,31 @@ const getDados = () => {
         cidade: cidade.value,
         uf: uf.value
     }
+
+    let req = new XMLHttpRequest();
+
+    req.open("POST", "http://localhost:3000/users")
+
+    req.setRequestHeader("Content-Type", "application/json")
+
+    req.send(JSON.stringify(usuario))
+
     mostrarDados()
+
+    limpar();
 }
 
 function mostrarDados() {
     console.log(usuario)
+}
+
+const limpar = () => {
+    nome.value = "" 
+    email.value = "" 
+    tel.value = "" 
+    cep.value = "" 
+    endereco.value = "" 
+    numero.value = "" 
+    cidade.value = "" 
+    uf.value = "" 
 }
