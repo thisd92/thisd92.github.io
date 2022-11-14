@@ -125,3 +125,30 @@ form{
     color: #fff;
     border-radius: 5px;
 }
+
+.table-container{
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px #8a8a8a;
+    margin: 20px auto;
+}
+
+#tabela{
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#tabela th, td{
+    padding: 5px;
+}
+
+#tabela th{
+    background-color: #000;
+    color: #fff;
+}
+
+#tabela tr:nth-child(odd){
+    background-color: #dbdbdb;
+}

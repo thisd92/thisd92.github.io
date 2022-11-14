@@ -43,7 +43,22 @@
     </header>
     <main>
         <section>
-            <table></table>
+            <button onclick=read()>Pesquisar</button>
+            <div class="table-container">
+                <table id="tabela">
+                    <thead>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>CEP</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>UF</th>
+                    </thead>
+                    <tbody id="linhas"></tbody>
+                </table>
+            </div>
         </section>
     </main>
     <footer>
@@ -59,6 +74,7 @@
         </div>
     </footer>
     <script src="../js/vanilla.js"></script>
+    <script type="text/javascript" src="../js/read.js"></script>
 </body>
 
 </html>
