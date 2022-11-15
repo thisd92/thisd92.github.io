@@ -1,0 +1,28 @@
+.forms {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border: solid #dbdbdb 1px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px #dbdbdb;
+    margin: 10px auto;
+}
+
+form {
+    width: 80%;
+    padding: 5px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.btn-form {
+    background-color: #353535;
+    color: #fff;
+    border-radius: 5px;
+}

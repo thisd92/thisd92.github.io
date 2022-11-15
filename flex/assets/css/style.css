@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,11 +10,11 @@
     font-size: 16px;
 }
 
-h1{
+h1 {
     font-size: 24px !important;
 }
 
-.container-header{
+.container-header {
     width: 100%;
     height: 90px;
     display: flex;
@@ -23,52 +23,55 @@ h1{
     background-color: #9c9c9c;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
     width: 20%;
+    height: 100%;
 }
 
-.logo img{
+.logo img {
     height: 86px;
 }
 
-.navbar{
+#navbar {
     width: 80%;
     height: 100%;
     display: flex;
 }
 
-.nav-list{
+.nav-list {
     width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
 }
 
-.nav-list li{
-    list-style: none;
-    margin-right: 30px;
-    padding: 30px;
+.nav-list a {
+    width: 12%;
+    height: 100%;
     border-radius: 10px;
-}
-
-.nav-list li:hover{
-    background-color: #000;
-    color: #fff;
-}
-
-.nav-list a{
-    text-decoration: none;
     color: #353535;
+    text-align: center;
+    text-decoration: none;
 }
 
-.active{
+.nav-list a:hover {
     background-color: #000;
     color: #fff;
 }
 
-footer{
+.active {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.nav-list li {
+    list-style: none;
+    margin: 25% auto;
+}
+
+footer {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -76,7 +79,7 @@ footer{
     background-color: #000;
 }
 
-.footer{
+.footer {
     display: flex;
     color: #fff;
     width: 100%;
@@ -84,71 +87,122 @@ footer{
     align-items: center;
 }
 
-.footer-logo{
+.footer-logo {
     display: flex;
     justify-content: center;
 }
 
-.footer-logo img{
+.footer-logo img {
     height: 86px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-
-.forms{
-    display: flex;
-    justify-content: center;
-    width: 30%;
-    border: solid #dbdbdb 1px;
+.dropdown {
+    height: max-content;
+    border: 1px solid #a0a0a0;
     border-radius: 5px;
-    box-shadow: 2px 2px 4px 4px #dbdbdb;
-    margin: 10px auto;
+    display: none;
 }
 
-form{
-    width: 80%;
-    padding: 5px;
+.menu-btn1, .menu-btn2 {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: 0.5s;
 }
 
-.form-control{
-    display: flex;
-    flex-direction: column;
-    padding: 3px;
-    width: 100%;
-    margin-bottom: 2px;
+.menu-btn1 {
+    left: 7px;
+    transform: rotate(45deg);
 }
 
-.btn-form{
-    background-color: #353535;
-    color: #fff;
-    border-radius: 5px;
+.menu-btn2 {
+    transform: rotate(-45deg);
 }
 
-.table-container{
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: 1px 2px 2px 1px #8a8a8a;
-    margin: 20px auto;
+@media(max-width: 1000px) {
+    .nav-list a {
+        width: 15%;
+    }
+
 }
 
-#tabela{
-    border-collapse: collapse;
-    border-radius: 5px;
-    width: 100%;
-    overflow: hidden;
+@media(max-width: 900px) {
+    .nav-list a {
+        width: 15%;
+    }
+
+    .nav-list li {
+        margin: 25%;
+    }
+
 }
 
-#tabela th, td{
-    padding: 5px;
-}
+@media(max-width: 540px) {
+    .container-header {
+        flex-direction: column;
+        height: 100%;
+    }
 
-#tabela th{
-    background-color: #000;
-    color: #fff;
-}
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-#tabela tr:nth-child(odd){
-    background-color: #dbdbdb;
+    .logo {
+        width: 20%;
+    }
+
+    .dropdown {
+        display: block;
+        margin-right: 5%;
+    }
+
+    .dropdown-btn {
+        width: 100%;
+        height: 40px;
+        padding-right: 8px;
+        border: 0px;
+        border-radius: 5px;
+        background-color: #444444;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-btn1.active-btn{
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn2.active-btn{
+        transform: rotate(45deg);
+    }
+    
+    #navbar {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list a {
+        width: 100%;
+        height: 40px;
+        border-radius: 0px;
+    }
+
+    .nav-list li {
+        margin-top: 5px;
+    }
 }
