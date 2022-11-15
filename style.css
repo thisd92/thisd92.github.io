@@ -5,31 +5,43 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poor Story';
-    font-size: 30px;
+    --font-bg: 30px;
+    --font-regular: 24px;
+    --font-sm: 20px;
+    --h1-bg: 48px;
+    --h1-sm: 32px;
+}
+
+p{
+    font-size: var(--font-bg);
 }
 
 .apresentacao{
     background-color: #EEE;
-    width: 800px;
+    width: 65%;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 4px #DDD;
-    margin: 150px auto 20px;
+    margin: 15% auto 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 h1{
-    font-size: 48px !important;
+    font-size: var(--h1-bg);
 }
 
 .botoes{
-    width: 800px;
+    width: 65%;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
 .btn{
-    padding: 20px;
+    font-size: var(--font-bg);
+    padding: 10px;
     text-decoration: none;
     color: #000;
     background-color: #EEE;
@@ -43,4 +55,53 @@ h1{
     background-color: #EEE;
     color: #000;
     box-shadow: 2px 2px 4px 4px #c0faae;
+}
+
+@media(max-width: 810px){
+    .p{
+        font-size: var(--font-regular);
+    }
+    
+    .apresentacao{
+        margin: 10%;
+        width: 80%;
+    }
+
+    .botoes{
+        width: 70%;
+    }
+
+    .btn{
+        padding: 10px;
+        font-size: var(--font-regular);
+    }
+}
+
+@media(max-width: 540px){
+    p{
+        font-size: var(--font-sm);
+    }
+
+    h1{
+        font-size: var(--h1-sm);
+    }
+
+    .apresentacao{
+        width: 80%;
+        margin: 10% 10% 5%;
+    }
+    
+    .botoes{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .btn{
+        width: 50%;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: var(--font-sm);
+        text-align: center;
+    }
 }
