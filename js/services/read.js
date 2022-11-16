@@ -19,6 +19,7 @@ const read = () => {
     function criarTabela(usuarios){
         const linhas = usuarios.map(usuario => {
             const tdId = document.createElement('td')
+            tdId.classList.add('display-td')
             tdId.innerHTML = usuario.id
 
             const tdNome = document.createElement('td')
@@ -26,11 +27,13 @@ const read = () => {
 
             const tdEmail = document.createElement('td')
             tdEmail.innerHTML = usuario.email
-
+            
             const tdTel = document.createElement('td')
+            tdTel.classList.add('display-td')
             tdTel.innerHTML = usuario.tel
 
             const tdCep = document.createElement('td')
+            tdCep.classList.add('display-td')
             tdCep.innerHTML = usuario.cep
 
             const tdEnd = document.createElement('td')
@@ -53,6 +56,7 @@ const read = () => {
             tr.appendChild(tdCidade)
             tr.appendChild(tdUF)
 
+
             return tr
         })
         const tabela = document.getElementById('linhas')
@@ -74,4 +78,13 @@ const read = () => {
             document.body.appendChild(msg)
         }
     })
+}
+
+document.body.onresize = () => {
+    const elTable = document.getElementsByClassName('display-td')
+    if(document.body.clientWidth < 500){
+        for(let i = 0; i < elTable.length; i++){
+            elTable[i].classList.add('td-off')
+        }
+    }
 }

@@ -1,0 +1,38 @@
+.table-container{
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px #8a8a8a;
+    margin: 20px auto;
+}
+
+#tabela{
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#tabela th, td{
+    padding: 3px;
+}
+
+#tabela th{
+    background-color: #000;
+    color: #fff;
+}
+
+#tabela tr:nth-child(odd){
+    background-color: #dbdbdb;
+}
+
+@media(max-width: 740px){
+    #tabela th, td{
+        padding: 3px;
+    }
+}
+
+@media(max-width: 400px){
+    #tabela th, td{
+        padding: 3px;
+    }
+}
