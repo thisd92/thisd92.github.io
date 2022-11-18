@@ -211,7 +211,7 @@ footer {
     }
 }
 
-@media(max-height: 740px){
+@media(max-height: 650px){
     footer{
         position: relative;
     }
