@@ -143,6 +143,10 @@ footer {
 }
 
 @media(max-width: 540px) {
+    *{
+        font-size: 14px;
+    }
+
     .container-header {
         flex-direction: column;
         height: 100%;
@@ -204,5 +208,11 @@ footer {
 
     .nav-list li {
         margin-top: 5px;
+    }
+}
+
+@media(max-height: 740px){
+    footer{
+        position: relative;
     }
 }

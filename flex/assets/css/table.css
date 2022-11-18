@@ -25,3 +25,15 @@ td {
 #tabela tr:nth-child(odd) {
     background-color: #dbdbdb;
 }
+
+@media(max-width: 740px){
+    .table-container {
+        width: 90%;
+    } 
+}
+
+@media(max-width: 540px){
+    .td-off{
+        display: none;
+    } 
+}

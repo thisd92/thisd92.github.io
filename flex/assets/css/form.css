@@ -1,11 +1,11 @@
 .forms {
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 35%;
     border: solid #dbdbdb 1px;
     border-radius: 5px;
     box-shadow: 2px 2px 4px 4px #dbdbdb;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 form {
@@ -26,3 +26,16 @@ form {
     color: #fff;
     border-radius: 5px;
 }
+
+@media(max-width: 1000px) {
+    .forms{
+        width: 50%;
+    }
+}
+
+@media(max-width: 540px) {
+    .forms{
+        width: 70%;
+    }
+}
+
