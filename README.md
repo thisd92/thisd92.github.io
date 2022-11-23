@@ -11,6 +11,7 @@ No CRUD é utilizado xMLHttpRequest
 Para testar o CRUD, podes iniciar um novo projeto
 - No console inicie o projeto node -> npm init -y
 - Também no console, instale o json-server -> npm i json-server
+- No arquivo package.json incluir o script "start": "json-server --watch db.json"
 - crie um arquivo db.json com o seguinte conteúdo:
 - - { "users": [{}]}
 - Ainda no console, inicie o server -> npm start
