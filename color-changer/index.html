@@ -8,11 +8,15 @@
     <title>Trocador cores</title>
     <script src="./js/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a7fd021888.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="container">
-        <h1>Color Changer</h1>
+<body id="body">
+    <div id="link" class="container-a">
+        <a href="../"><i class="fa-solid fa-house"></i> Home</a>
+    </div>
+    <div class="container-h1">
+        <h1 id="title">Color Changer</h1>
     </div>
     <div class="container-btn">
         <input type="button" class="btn" value="#FFFFFF" title="WhitFFFFFFa-label="White" />
@@ -47,18 +51,24 @@
         const btn = document.getElementsByClassName('btn')
 
         for (let i = 0; i < btn.length; i++) {
-            btn[i].addEventListener('click', trocarCor)
-            const cor = btn[i].value
-            btn[i].style.background = cor
+            btn[i].addEventListener('click', changeColor)
+            const color = btn[i].value
+            btn[i].style.background = color
         }
 
-        function trocarCor() {
+        function changeColor() {
             $('input').click(function () {
-                const corBotao = this.value;
-                $('body').css('background-color', corBotao)
+                const btnColor = this.value;
+                $('body').css('background-color', btnColor)
+                if(btnColor == '#000000' || btnColor == '#0000FF' || btnColor == '#4B0082'){
+                    $('h1').css('color', 'white')
+                    $('a').css('color', 'white')
+                }else{
+                    $('h1').css('color', 'black')
+                    $('a').css('color', 'black')
+                }
             })
         }
-
     </script>
 </body>
 
