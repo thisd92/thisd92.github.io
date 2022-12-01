@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocador cores</title>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Color Changer</h1>
+    </div>
+    <div class="container-btn">
+        <input type="button" class="btn" value="#FFFFFF" title="WhitFFFFFFa-label="White" />
+        <input type="button" class="btn" value="#FAEBD7" title="AntiqueWhite" aria-label="AntiqueWhite" />
+        <input type="button" class="btn" value="#FFEBCD" title="BlanchedAlmond" aria-label="BlanchedAlmond" />
+        <input type="button" class="btn" value="#FFFF00" title="Yellow" aria-label="Yellow" />
+        <input type="button" class="btn" value="#FFD700" title="Golden" aria-label="Golden" />
+        <input type="button" class="btn" value="#FF6347" title="Tomato" aria-label="Tomato" />
+        <input type="button" class="btn" value="#FF0000" title="Red" aria-label="Red" />
+        <input type="button" class="btn" value="#FF69B4" title="HotPink" aria-label="HotPink" />
+        <input type="button" class="btn" value="#FF1493" title="DeepPink" aria-label="DeepPink" />
+        <input type="button" class="btn" value="#8B008B" title="DarkMagenta" aria-label="DarkMagenta" />
+        <input type="button" class="btn" value="#4B0082" title="Indigo" aria-label="Indigo" />
+        <input type="button" class="btn" value="#DEB887" title="BurlyWood" aria-label="BurlyWood" />
+        <input type="button" class="btn" value="#D2691E" title="Chocolate" aria-label="Chocolate" />
+        <input type="button" class="btn" value="#8B4513" title="SaddleBrown" aria-label="SaddleBrown" />
+        <input type="button" class="btn" value="#9ACD32" title="YellowGreen" aria-label="YellowGreen" />
+        <input type="button" class="btn" value="#228B22" title="ForestGreen" aria-label="ForestGreen" />
+        <input type="button" class="btn" value="#00FF7F" title="SpringGreen" aria-label="SpringGreen" />
+        <input type="button" class="btn" value="#66CDAA" title="MediumAquamarine" aria-label="MediumAquamarine" />
+        <input type="button" class="btn" value="#48D1CC" title="MediumTurquoise" aria-label="MediumTurquoise" />
+        <input type="button" class="btn" value="#00BFFF" title="DeepSkyBlue" aria-label="DeepSkyBlue" />
+        <input type="button" class="btn" value="#0000FF" title="Blue" aria-label="Blue" />
+        <input type="button" class="btn" value="#836FFF" title="SlateBlue1" aria-label="SlateBlue1" />
+        <input type="button" class="btn" value="#C0C0C0" title="Silver" aria-label="Silver" />
+        <input type="button" class="btn" value="#696969" title="DimGray" aria-label="DimGray" />
+        <input type="button" class="btn" value="#000000" title="Black" aria-label="Black" />
+    </div>
+
+    <script>
+
+        const btn = document.getElementsByClassName('btn')
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', trocarCor)
+            const cor = btn[i].value
+            btn[i].style.background = cor
+        }
+
+        function trocarCor() {
+            $('input').click(function () {
+                const corBotao = this.value;
+                $('body').css('background-color', corBotao)
+            })
+        }
+
+    </script>
+</body>
+
+</html>
