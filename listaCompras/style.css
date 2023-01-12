@@ -19,7 +19,7 @@ a{
 .card{
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 40%;
     height: 100%;
     margin: 80px auto;
     flex-direction: column;
@@ -54,8 +54,14 @@ a{
     display: flex;
 }
 
+.form-control{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 .card input{
-    width: 90%;
+    width: 80%;
     padding: 3px;
     margin-right: 10px;
 }
@@ -111,4 +117,32 @@ footer{
   
   .container-social a{
     padding: 3px;
+  }
+
+  @media(max-width: 1400px){
+    .card{
+        width: 65%;
+    }
+  }
+
+  @media(max-width: 1000px){
+    .card{
+        width: 70%;
+    }
+  }
+
+  @media(max-width: 700px){
+    .card{
+        width: 90%;
+    }
+  }
+
+  @media(max-width: 550px){
+    .card{
+        width: 100%;
+    }
+
+    .card input{
+        width: 100%;
+    }
   }
