@@ -65,21 +65,30 @@
 
 
     <script>
+        // USING jQuery
+        // EVENT CLICK ON BUTTON "ADICIONAR"
         $("#adicionar").click(e => {
+            // GET TEXTAREA'S VALUE AND APPEND ELEMENT P WITH THE SAME CONTENT
             let texto = $("#comentario").val()
             $("#main").append(`<p class="comentario">${texto}<p>`)
         })
 
+        // EVENT CLICK ON BUTTON "REMOVER"
+        // REMOVE ALL ELEMENTS P APPENDED
         $("#remover").click(e => {
             $(".comentario").remove();
         })
 
+        // EVENT CLICK ON BUTTON "LIMPAR"
+        // CLEAR CONTENT IN THE TEXTAREA
         $("#limpar").click(e => {
             $("#comentario").val('');
         })
 
+        // WHEN THE WINDOW IS LOAD, ACTIVATE FUNCTION
         window.onload = () => (verificaUrl())
 
+        // VERIFICATE URL AND ACTIVE BUTTON
         function verificaUrl() {
             let doc = window.location.href.toString()
             if (doc.includes('JQuery')) {
