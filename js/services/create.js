@@ -1,5 +1,8 @@
+// AJAX FUNCTION TO SEND DATA TO DATABASE
+
 let usuario
 
+// IDENTIFY THE INPUTS
 let nome = document.getElementById('fname')
 let email = document.getElementById('femail')
 let tel = document.getElementById('ftel')
@@ -11,6 +14,7 @@ let uf = document.getElementById('fUf')
 
 const save = () => {
 
+    // SET USUARIO'S DATA WITH THE INPUT'S VALUES
     usuario = {
         nome: nome.value,
         email: email.value,

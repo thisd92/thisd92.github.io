@@ -1,3 +1,4 @@
+// AJAX FUNCTION TO AUTOCOMPLETE POSTAL CODE (CEP)
 const getCep = () => {
 
     let cep = document.getElementById('fcep').value
@@ -26,6 +27,7 @@ const getCep = () => {
         url: `https://viacep.com.br/ws/${cep}/json`,
         method: "get",
         success(resp) {
+            // SET RESPONSE TO THE INPUTS
             const codigo = JSON.parse(resp)
             cidade.value = codigo.localidade
             uf.value = codigo.uf

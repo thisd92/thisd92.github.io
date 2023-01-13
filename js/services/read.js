@@ -1,3 +1,4 @@
+// AJAX FUNCTION TO RECEIVE DATA'S DATABASE
 const read = () => {
     function ajax(config){
         const xhr = new XMLHttpRequest()
@@ -16,6 +17,7 @@ const read = () => {
         xhr.send()
     }
 
+    // CREATE TABLE'S ROWS ELEMENTS AND APPEND ON TABLE
     function criarTabela(usuarios){
         const linhas = usuarios.map(usuario => {
             const tdId = document.createElement('td')
@@ -68,6 +70,7 @@ const read = () => {
         url: "http://localhost:3000/users",
         method: "get",
         sucesso(resposta){
+            // RESPONSE'S DATABASE ARE USED TO CREATE TABLE
             const usuarios = JSON.parse(resposta)
             const tdElement = document.querySelector('td')
             if(!tdElement)
@@ -80,6 +83,7 @@ const read = () => {
     })
 }
 
+// HIDDEN TABLE'S COLUMNS WHEN RESIZE THE WINDOW
 document.body.onresize = () => {
     const elTable = document.getElementsByClassName('display-td')
     if(document.body.clientWidth < 500){

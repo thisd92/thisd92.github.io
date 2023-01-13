@@ -1,5 +1,7 @@
+// VERIFICATE URL WHEN THE WINDOW LOAD
 window.onload = () => (verificaUrl())
 
+// GET THE ACTIVE PAGE AND SET THE ACTIVE CLASS FOR THE BUTTON
 function verificaUrl() {
     let doc = window.location.href.toString()
     if (doc.includes('create')) {
@@ -17,6 +19,7 @@ function verificaUrl() {
     }
 }
 
+// FLEXBOX PAGE DROPDOWN ACTION
 function toggleDrop() {
     const navbar = document.getElementById('navbar')
     const menuBtn1 = document.querySelector('.menu-btn1')
@@ -32,6 +35,7 @@ function toggleDrop() {
     }
 }
 
+// SHOW DROPDOWN WHEN RESIZE
 document.body.onresize = () => {
     const elNav = document.getElementById('navbar')
     const menuBtn1 = document.querySelector('.menu-btn1')
