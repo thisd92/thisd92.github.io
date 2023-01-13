@@ -12,6 +12,7 @@
 </head>
 
 <body id="body">
+    <!-- LINK TO HOMEPAGE -->
     <div id="link" class="container-a">
         <a href="../"><i class="fa-solid fa-house"></i> Home</a>
     </div>
@@ -19,7 +20,8 @@
         <h1 id="title">Color Changer</h1>
     </div>
     <div class="container-btn">
-        <input type="button" class="btn" value="#FFFFFF" title="WhitFFFFFFa-label="White" />
+        <!-- BUTTONS IN COLORS -->
+        <input type="button" class="btn" value="#FFFFFF" title="WhitFFFFFFa-label=" White" />
         <input type="button" class="btn" value="#FAEBD7" title="AntiqueWhite" aria-label="AntiqueWhite" />
         <input type="button" class="btn" value="#FFEBCD" title="BlanchedAlmond" aria-label="BlanchedAlmond" />
         <input type="button" class="btn" value="#FFFF00" title="Yellow" aria-label="Yellow" />
@@ -48,26 +50,30 @@
 
     <script>
 
+        // IDENTIFIED ALL BTNS
         const btn = document.getElementsByClassName('btn')
 
+        // ADD EVENT CLICK ON ALL BUTTONS
         for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener('click', changeColor)
+            // GET BTN'S VALUES AND PUT THE COLOR IN HIS BACKGROUND
             const color = btn[i].value
             btn[i].style.background = color
         }
 
+        // USING jQuery
+        // GET THE BTN'S VALUE AND SET TO THE BODY'S BACKGROUND
         function changeColor() {
-            $('input').click(function () {
-                const btnColor = this.value;
-                $('body').css('background-color', btnColor)
-                if(btnColor == '#000000' || btnColor == '#0000FF' || btnColor == '#4B0082'){
-                    $('h1').css('color', 'white')
-                    $('a').css('color', 'white')
-                }else{
-                    $('h1').css('color', 'black')
-                    $('a').css('color', 'black')
-                }
-            })
+            const btnColor = this.value;
+            $('body').css('background-color', btnColor)
+            // IF HAS A DARK BACKGROUND, PUT WHITE ON THE LETTER'S COLOR
+            if (btnColor == '#000000' || btnColor == '#0000FF' || btnColor == '#4B0082') {
+                $('h1').css('color', 'white')
+                $('a').css('color', 'white')
+            } else {
+                $('h1').css('color', 'black')
+                $('a').css('color', 'black')
+            }
         }
     </script>
 </body>
