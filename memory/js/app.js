@@ -5,39 +5,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = [
     {
       name: 'inter',
-      path: '../assets/imgs/internacional.png'
+      path: './assets/imgs/internacional.png'
     },
     {
       name: 'palmeiras',
-      path: '../assets/imgs/palmeiras.png'
+      path: './assets/imgs/palmeiras.png'
     },
     {
       name: 'santos',
-      path: '../assets/imgs/santos.png'
+      path: './assets/imgs/santos.png'
     },
     {
       name: 'sao_paulo',
-      path: '../assets/imgs/sao-paulo.png'
+      path: './assets/imgs/sao-paulo.png'
     },
     {
       name: 'corinthians',
-      path: '../assets/imgs/corinthians.png'
+      path: './assets/imgs/corinthians.png'
     },
     {
       name: 'flamengo',
-      path: '../assets/imgs/flamengo.png'
+      path: './assets/imgs/flamengo.png'
     },
     {
       name: 'gremio',
-      path: '../assets/imgs/gremio.png'
+      path: './assets/imgs/gremio.png'
     },
     {
       name: 'athletico',
-      path: '../assets/imgs/atletico.png'
+      path: './assets/imgs/atletico.png'
     },
     {
       name: 'vasco',
-      path: '../assets/imgs/vasco.png'
+      path: './assets/imgs/vasco.png'
     }
   ];
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createCard(card, index) {
     const cardGame = document.createElement('img');
-    cardGame.setAttribute('src', '../assets/imgs/logo-brasileirao.png');
+    cardGame.setAttribute('src', './assets/imgs/logo-brasileirao.png');
     cardGame.setAttribute('data-id', index);
     cardGame.className = 'back';
     board.appendChild(cardGame);
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         if (flippedCards[0].cardId === flippedCards[1].cardId) {
           flippedCards.forEach(({ element }) => {
-            element.setAttribute('src', '../assets/imgs/Green-Check.png');
+            element.setAttribute('src', './assets/imgs/Green-Check.png');
             element.removeEventListener('click', flipCard);
             cardsMatched.push(flippedCards[0].cardId);
             points += 0.5;
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         } else {
           flippedCards.forEach(({ element }) => {
-            element.setAttribute('src', '../assets/imgs/logo-brasileirao.png');
+            element.setAttribute('src', './assets/imgs/logo-brasileirao.png');
           });
         }
         flippedCards = [];
