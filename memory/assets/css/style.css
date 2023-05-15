@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+span{
+    font-size: 1.2em;
+}
+
+.title{
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.score, .clicks, .record, .reset{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.container-cards{
+    margin: 0 auto;
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4%;
+    gap: 2px;
+}
+
+.card{
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.bg-card{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+}
+
+.card .club, .back{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.back{
+    border: 1px #00000030 solid;
+}
+
+#resetBtn{
+    width: 5em;
+    font-size: 1.5em;
+    padding: 3px;
+    border-radius: 25px;
+}
